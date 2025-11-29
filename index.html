@@ -35,7 +35,7 @@
         header {
             background-color: var(--bg-dark); /* 深色背景 */
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1); /* 淺色分隔線 */
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .navbar-top {
@@ -51,7 +51,7 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            color: white; /* Logo文字為白色 */
+            color: white;
         }
         .navbar-logo .logo-zh {
             font-size: 1.2rem;
@@ -68,7 +68,7 @@
         .nav-links-top a {
             margin-left: 1.5rem;
             text-decoration: none;
-            color: rgba(255,255,255,0.7); /* 導航文字為淺色 */
+            color: rgba(255,255,255,0.7);
             font-weight: 400;
             transition: color 0.2s;
         }
@@ -78,8 +78,8 @@
 
         /* --- 全寬 Hero 區塊 --- */
         .hero-full-width {
-            background-color: var(--bg-dark); /* 深色背景 */
-            padding: 4rem 0 6rem; /* 增加上下間距 */
+            background-color: var(--bg-dark);
+            padding: 4rem 0 6rem;
             text-align: center;
             color: white;
         }
@@ -88,7 +88,7 @@
             margin-bottom: 2rem;
         }
         .hero-full-width .hero-logo .logo-zh {
-            font-size: 2.5rem; /* 更大更顯眼 */
+            font-size: 2.5rem;
             font-weight: 700;
             color: white;
             margin-bottom: 0.5rem;
@@ -111,9 +111,9 @@
 
         .search-bar-hero {
             display: flex;
-            max-width: 700px; /* 更寬的搜尋欄 */
+            max-width: 700px;
             margin: 2rem auto 0;
-            background-color: white; /* 白色搜尋框 */
+            background-color: white;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -121,7 +121,7 @@
 
         #main-search {
             flex-grow: 1;
-            padding: 1.2rem 1.5rem; /* 更大的填充 */
+            padding: 1.2rem 1.5rem;
             border: none;
             font-size: 1.1rem;
             outline: none;
@@ -129,7 +129,7 @@
         }
 
         .cta-search-hero {
-            background-color: var(--primary-color); /* 藍色搜尋按鈕 */
+            background-color: var(--primary-color);
             color: white;
             padding: 1.2rem 2rem;
             border: none;
@@ -145,7 +145,7 @@
         /* --- 主要內容區容器 --- */
         .content-wrapper {
             max-width: 1200px;
-            margin: -4rem auto 3rem; /* 向上疊加到 Hero 區塊 */
+            margin: -4rem auto 3rem;
             padding: 0 var(--spacing-unit);
             position: relative;
             z-index: 10;
@@ -159,18 +159,16 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             margin-bottom: 3rem;
         }
-        .category-grid-homepage h2 {
+        .category-grid-homepage h2, .book-list-section h2 {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary-color);
             margin-bottom: 1.5rem;
             text-align: left;
-            border-left: none; /* 移除原本的邊框 */
-            padding-left: 0;
         }
 
         .category-card {
-            background: var(--bg-light); /* 淺灰色背景 */
+            background: var(--bg-light);
             border-radius: 6px;
             padding: 1.2rem;
             text-align: center;
@@ -183,43 +181,54 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 120px; /* 確保卡片高度一致 */
+            min-height: 120px;
         }
-
         .category-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
         .card-icon {
             font-size: 2rem;
-            color: var(--primary-color); /* 圖標顏色 */
+            color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
-
         .card-title {
             font-size: 1rem;
             font-weight: 500;
         }
 
-        /* --- 書籍列表 --- */
+        /* --- 書籍列表與篩選面板 --- */
         .book-list-section {
             background: white;
             border-radius: 8px;
             padding: 2.5rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        .book-list-section h2 {
-            font-size: 1.8rem;
-            font-weight: 700;
+        
+        .filter-panel {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            flex-wrap: wrap; /* RWD 換行 */
+        }
+        .filter-panel label {
+            font-weight: 500;
             color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            text-align: left;
-            border-left: none;
-            padding-left: 0;
+            margin-right: 0.5rem;
+            white-space: nowrap; /* 不換行 */
+        }
+        .filter-panel select, .filter-panel input[type="number"] {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+            min-width: 120px;
+            cursor: pointer;
         }
 
-        .card-grid { /* 應用於書籍列表 */
+        .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
@@ -231,7 +240,7 @@
             border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 1.2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 輕微陰影 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
             text-decoration: none;
@@ -295,18 +304,7 @@
             align-self: flex-end;
         }
 
-        /* --- Footer --- */
-        footer {
-            margin-top: 3rem;
-            padding: 2rem 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            background-color: white;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* --- Modal (書籍詳細頁) 樣式 --- */
+        /* --- Modal 樣式 (維持不變) --- */
         .modal {
             display: none; 
             position: fixed;
@@ -330,43 +328,34 @@
             max-width: 900px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             display: flex;
-            flex-wrap: wrap; /* 允許換行 */
+            flex-wrap: wrap;
             gap: 2rem;
             animation: fadeIn 0.3s;
+            position: relative; /* for close button */
         }
-
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
         .modal-close {
             color: #aaa;
             float: right;
             font-size: 28px;
             font-weight: bold;
             line-height: 1;
-            position: absolute; /* 相對 modal-content 定位 */
+            position: absolute;
             top: 15px;
             right: 25px;
         }
-
-        .modal-close:hover,
-        .modal-close:focus {
+        .modal-close:hover, .modal-close:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
         }
-
-        .detail-img-area {
+        .detail-img-area, .detail-info-area {
             flex: 1;
-            min-width: 300px; /* 確保圖片區域不會太小 */
+            min-width: 300px;
         }
-
         .detail-img {
             width: 100%;
             height: 350px;
-            background: var(--bg-light); /* 圖片佔位符 */
+            background: var(--bg-light);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -374,44 +363,32 @@
             border-radius: 6px;
             margin-bottom: 1rem;
         }
-
-        .detail-info-area {
-            flex: 1.5; /* 資訊區域佔更多空間 */
-            min-width: 300px;
-            position: relative;
-        }
-
         .detail-info-area h2 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
             color: var(--primary-color);
             text-align: left;
         }
-
         .detail-small-info {
             font-size: 1rem;
             color: var(--text-light);
             margin-bottom: 1rem;
         }
-
         #detail-price {
             font-size: 3rem;
             color: #d32f2f;
             font-weight: 700;
             margin: 1rem 0;
         }
-
         .detail-condition-box {
             background: #fff3e0;
             padding: 0.8rem;
             border-left: 4px solid var(--accent-color);
             margin-bottom: 1.5rem;
         }
-
         .detail-condition-box strong {
             font-size: 1.2rem;
         }
-
         .cta-detail {
             background-color: var(--accent-color);
             color: var(--primary-color);
@@ -424,16 +401,12 @@
             width: 100%;
             transition: opacity 0.2s;
         }
-
-        .cta-detail:hover {
-            opacity: 0.9;
-        }
-
         .detail-contact-info {
             margin-top: 1.5rem;
             border-top: 1px dashed var(--border-color);
             padding-top: 1rem;
         }
+
 
         /* RWD 響應式調整 */
         @media (max-width: 768px) {
@@ -457,6 +430,13 @@
                 min-width: auto;
                 width: 100%;
             }
+            .filter-panel {
+                gap: 1rem;
+                justify-content: space-between;
+            }
+            .filter-item {
+                flex-basis: 45%; /* 讓篩選項目在小螢幕上兩兩並排 */
+            }
         }
     </style>
 </head>
@@ -472,7 +452,7 @@
                 <a href="#">📚 二手書</a>
                 <a href="#">⬆️ 上架</a>
                 <a href="#">👤 帳戶</a>
-                <a href="#">❓ 幫助</a>
+                <a href="#" onclick="showStandards()">❓ 幫助 / 評級標準</a>
             </nav>
         </div>
     </header>
@@ -512,28 +492,72 @@
                 </a>
                 <a href="#" class="category-card" data-category="Materials">
                     <div class="card-icon">🧪</div>
-                    <div class="card-title">材料科學與工程</div>
+                    <div class="card-title">材料科學</div>
+                </a>
+                 <a href="#" class="category-card" data-category="Chem">
+                    <div class="card-icon">🔬</div>
+                    <div class="card-title">化學工程系</div>
+                </a>
+                <a href="#" class="category-card" data-category="Civil">
+                    <div class="card-icon">🏗️</div>
+                    <div class="card-title">營建工程系</div>
+                </a>
+                <a href="#" class="category-card" data-category="ME">
+                    <div class="card-icon">⚙️</div>
+                    <div class="card-title">機械工程系</div>
                 </a>
                 <a href="#" class="category-card" data-category="Design">
                     <div class="card-icon">🎨</div>
                     <div class="card-title">設計系</div>
-                </a>
-                <a href="#" class="category-card" data-category="Hot">
-                    <div class="card-icon">💰</div>
-                    <div class="card-title">本學期熱門</div>
                 </a>
             </div>
         </section>
 
         <section id="search-results" class="book-list-section">
             <h2>📚 推薦書籍列表</h2>
+            
+            <div class="filter-panel">
+                <div class="filter-item">
+                    <label for="filter-dept">科系篩選:</label>
+                    <select id="filter-dept" onchange="applyFilters()">
+                        <option value="">所有科系</option>
+                        <option value="EEE">電機工程系 (EEE)</option>
+                        <option value="CS">資訊工程系 (CS)</option>
+                        <option value="IM">工業管理系 (IM)</option>
+                        <option value="Materials">材料科學 (Materials)</option>
+                        <option value="Chem">化學工程系 (Chem)</option>
+                        <option value="Civil">營建工程系 (Civil)</option>
+                        <option value="ME">機械工程系 (ME)</option>
+                        <option value="Design">設計系 (Design)</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="filter-condition">書況篩選:</label>
+                    <select id="filter-condition" onchange="applyFilters()">
+                        <option value="">所有書況</option>
+                        <option value="S">S 級 (近全新)</option>
+                        <option value="A">A 級 (輕微使用)</option>
+                        <option value="B">B 級 (明顯註記)</option>
+                        <option value="C">C 級 (瑕疵書)</option>
+                    </select>
+                </div>
+                
+                <div class="filter-item">
+                    <label for="filter-max-price">最高價格:</label>
+                    <input type="number" id="filter-max-price" placeholder="例如: 500" oninput="applyFilters()">
+                </div>
+            </div>
+
             <div class="card-grid" id="book-listing">
                 </div>
         </section>
         
     </main>
 
-    <div id="bookDetailModal" class="modal" onclick="closeModal(event)">
+    
+
+<div id="bookDetailModal" class="modal" onclick="closeModal(event)">
         <div class="modal-content" onclick="event.stopPropagation()">
             <span class="modal-close" onclick="closeModal()">&times;</span>
             <div class="detail-img-area">
@@ -573,44 +597,48 @@
     </footer>
 
     <script>
-        // --- 書籍分級標準 (用於詳細頁顯示) ---
+        // --- 書籍分級標準 (已更新 A 級描述) ---
         const conditionStandards = {
             'S': {
                 name: 'S 級｜近全新',
                 color: 'cond-S',
-                description: '幾乎沒翻閱痕跡、無筆記劃線、封面完整無折、無破損水漬、書邊乾淨。'
+                description: '條件：幾乎沒翻閱痕跡、無筆記劃線、封面／封底完整無折、無水漬、無破損、書邊乾淨。'
             },
             'A': {
                 name: 'A 級｜輕微使用',
                 color: 'cond-A',
-                description: '少量劃線（不影響閱讀，最多允許 1-2 項），可能有名字或封角輕微磨損。'
+                description: '條件：最多允許 1–2 項：少量劃線（不影響閱讀）、有名字、輕微筆跡、封角輕微磨損。推薦一般同學購買，價格 40–55% 原價。'
             },
             'B': {
                 name: 'B 級｜可用但有明顯註記',
                 color: 'cond-B',
-                description: '劃線多、有筆記、書角折痕明顯或封面有明顯磨損。'
+                description: '條件：可包含：劃線多、有筆記、書角折痕明顯、封面有明顯磨損。'
             },
             'C': {
-                name: 'C 級｜瑕疵書',
+                name: 'C 級｜瑕疵書（須明確標示）',
                 color: 'cond-C',
-                description: '包含撕頁、破損、水漬、發霉、部分頁脫落或嚴重筆記（滿滿螢光筆）等任一項。'
+                description: '條件：含其中任一就列 C：撕頁、破損、水漬、發霉、部分頁脫落、嚴重筆記（滿滿螢光筆）。'
             }
         };
 
-        // 模擬書籍資料庫 (更新了書況評級)
+        // 模擬書籍資料庫 (新增科系、調整書況)
         const mockBooks = [
-            { id: 1, title: "微積分上冊 (第十版)", course: "應用微積分", teacher: "丁教授", version: "2020", price: 350, condition: 'A', stars: 4, inventory: 3, dept: 'IM' },
-            { id: 2, title: "電路學與電子學 (第三版)", course: "電工學", teacher: "王老師", version: "2018", price: 200, condition: 'B', stars: 3, inventory: 1, dept: 'EEE' },
+            { id: 1, title: "基礎工程熱力學 (第三版)", course: "熱力學一", teacher: "丁教授", version: "2020", price: 350, condition: 'A', stars: 4, inventory: 3, dept: 'ME' },
+            { id: 2, title: "電路學與電子學 (第三版)", course: "電工學", teacher: "王老師", version: "200", price: 200, condition: 'B', stars: 3, inventory: 1, dept: 'EEE' },
             { id: 3, title: "資料結構與演算法", course: "資工必修", teacher: "陳老師", version: "2022", price: 480, condition: 'S', stars: 5, inventory: 2, dept: 'CS' },
             { id: 4, title: "工程材料概論", course: "材料導論", teacher: "李教授", version: "2019", price: 100, condition: 'C', stars: 1, inventory: 5, dept: 'Materials' },
-            { id: 5, title: "設計原理與應用", course: "視覺傳達", teacher: "林老師", version: "2023", price: 550, condition: 'A', stars: 4, inventory: 4, dept: 'Design' },
-            { id: 6, title: "統計學與商業決策", course: "管理科學", teacher: "張教授", version: "2021", price: 320, condition: 'A', stars: 4, inventory: 0, dept: 'IM' }
+            { id: 5, title: "化學工程單元操作", course: "單元操作", teacher: "林老師", version: "2023", price: 550, condition: 'A', stars: 4, inventory: 4, dept: 'Chem' },
+            { id: 6, title: "統計學與商業決策", course: "管理科學", teacher: "張教授", version: "2021", price: 320, condition: 'A', stars: 4, inventory: 0, dept: 'IM' },
+            { id: 7, title: "微積分下冊 (第十版)", course: "應用微積分", teacher: "丁教授", version: "2020", price: 300, condition: 'B', stars: 3, inventory: 6, dept: 'ME' },
+            { id: 8, title: "結構動力學", course: "結構工程", teacher: "趙教授", version: "2017", price: 600, condition: 'A', stars: 4, inventory: 2, dept: 'Civil' },
+            { id: 9, title: "視覺設計概論", course: "設計理論", teacher: "黃老師", version: "2024", price: 400, condition: 'S', stars: 5, inventory: 1, dept: 'Design' }
         ];
 
         const bookListing = document.getElementById('book-listing');
         const mainSearch = document.getElementById('main-search');
-        const bookDetailModal = document.getElementById('bookDetailModal'); // 確保變數名正確
+        const bookDetailModal = document.getElementById('bookDetailModal'); 
 
+        // 輔助函數：顯示星星
         function getStarHtml(stars) {
             return '★'.repeat(stars) + '☆'.repeat(5 - stars);
         }
@@ -626,7 +654,7 @@
             card.onclick = (e) => {
                 e.preventDefault();
                 if (!isSoldOut) {
-                    openBookDetail(book.id); // 呼叫詳細頁函數
+                    openBookDetail(book.id);
                 } else {
                     alert('抱歉，此書已售罄！');
                 }
@@ -646,7 +674,7 @@
             bookListing.appendChild(card);
         }
 
-        // --- 初始化頁面 ---
+        // --- 初始化 / 渲染列表 ---
         function initializeListing(books = mockBooks) {
             bookListing.innerHTML = '';
             books.forEach(renderBookCard);
@@ -656,7 +684,7 @@
             }
         }
         
-        // --- 搜尋功能 ---
+        // --- 總搜尋功能 (Hero 區塊) ---
         function handleSearch() {
             const query = mainSearch.value.trim().toLowerCase();
             const filteredBooks = mockBooks.filter(book => 
@@ -667,21 +695,46 @@
             initializeListing(filteredBooks);
         }
 
-        // --- 快速分類功能 ---
+        // --- 篩選功能 (應用於列表區塊) ---
+        function applyFilters() {
+            const deptFilter = document.getElementById('filter-dept').value;
+            const condFilter = document.getElementById('filter-condition').value;
+            const priceFilter = parseInt(document.getElementById('filter-max-price').value);
+
+            const filtered = mockBooks.filter(book => {
+                // 1. 科系篩選
+                if (deptFilter && book.dept !== deptFilter) {
+                    return false;
+                }
+                // 2. 書況篩選
+                if (condFilter && book.condition !== condFilter) {
+                    return false;
+                }
+                // 3. 價格篩選 (如果輸入了有效數字)
+                if (!isNaN(priceFilter) && book.price > priceFilter) {
+                    return false;
+                }
+                return true;
+            });
+
+            initializeListing(filtered);
+        }
+
+        // --- 快速分類功能 (點擊卡片) ---
         document.querySelectorAll('.category-card').forEach(card => {
             card.addEventListener('click', function(e) {
                 e.preventDefault();
                 const category = this.getAttribute('data-category');
-                let filtered = [];
-                if (category === 'Hot') {
-                    // 模擬熱門：高價格且高庫存的書
-                    filtered = mockBooks.filter(book => book.price > 300 && book.inventory > 1);
-                } else {
-                    filtered = mockBooks.filter(book => book.dept === category);
-                }
-                initializeListing(filtered);
+                
+                // 將篩選面板設為空值，並根據點擊的科系進行篩選
+                document.getElementById('filter-dept').value = category;
+                document.getElementById('filter-condition').value = "";
+                document.getElementById('filter-max-price').value = "";
+                
+                applyFilters();
             });
         });
+
 
         // --- 書籍詳細頁 (Modal) 功能 ---
         function openBookDetail(bookId) {
@@ -698,8 +751,9 @@
             document.getElementById('detail-price').textContent = `$${book.price}`;
             document.getElementById('detail-condition-stars').textContent = getStarHtml(book.stars);
             document.getElementById('detail-condition-text').textContent = `${standard.name}`;
-            document.getElementById('detail-condition-description').textContent = `條件：${standard.description}`; // 新增描述
+            document.getElementById('detail-condition-description').textContent = `${standard.description}`; 
             document.getElementById('detail-meetup-info').innerHTML = `
+                <p><strong>賣家資訊：</strong> 台科大二手書小天使 (#${book.id}號賣家)</p>
                 <p><strong>面交地點：</strong> 台科大圖書館一樓 / 校門口 (可彈性)</p>
                 <p><strong>建議面交時間：</strong> 每週一、三 18:00-19:00；或期初 / 期末活動期間。</p>
             `;
@@ -718,6 +772,17 @@
             closeModal();
         }
 
+        function showStandards() {
+            let standardsText = "--- 烈焰風暴骰子牛 二手書評級標準 ---\n\n";
+            for (const key in conditionStandards) {
+                const standard = conditionStandards[key];
+                standardsText += `[${key} 級｜${standard.name}]\n`;
+                standardsText += `${standard.description}\n`;
+                standardsText += '\n';
+            }
+            alert(standardsText);
+        }
+        
         // 監聽 ESC 鍵關閉 Modal
         window.onkeydown = function(event) {
             if (event.key === 'Escape' && bookDetailModal.style.display === 'block') {
@@ -725,7 +790,7 @@
             }
         };
 
-        // 啟動網站
+        // 啟動網站：初始載入所有書籍
         window.onload = () => initializeListing();
 
     </script>
