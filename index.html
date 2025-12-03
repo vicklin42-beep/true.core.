@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>烈焰風暴骰子牛 True Core - 台科大二手教科書</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Blaze Storm Diced Beef | True Core - NTUST Used Books</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* --- 視覺變數與全局樣式 (高級有氣質配色) --- */
+        /* --- VISUAL VARIABLES & GLOBAL STYLES (Premium & Elegant Color Scheme) --- */
         :root {
-            --primary-color: #001f3f; /* 主色：深海軍藍 - 沉穩專業 */
-            --accent-color: #c49b3c; /* 輔色：柔和金色 - 高級有氣質 */
-            --bg-dark: #202124; /* Hero區塊的深灰色背景 */
-            --bg-light: #f5f5f5; /* 淺灰色內容區背景 */
+            --primary-color: #001f3f; /* Primary: Deep Navy Blue - Stable and Professional */
+            --accent-color: #c49b3c; /* Accent: Soft Gold - Elegant and High-Quality */
+            --bg-dark: #202124; /* Hero Block Dark Background */
+            --bg-light: #f5f5f5; /* Light Gray Content Background */
             --text-dark: #202124;
             --text-light: #5f6368;
-            --border-color: #e0e0e0; /* 邊框更柔和 */
+            --border-color: #e0e0e0; 
             --spacing-unit: 1rem;
         }
 
@@ -22,7 +22,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Noto Sans TC', sans-serif;
+            font-family: 'Roboto', sans-serif; /* Changed to English friendly font */
         }
 
         body {
@@ -31,7 +31,7 @@
             min-height: 100vh;
         }
 
-        /* --- 導航列 (Navbar - 頂部) --- */
+        /* --- Navbar (Top) --- */
         header {
             background-color: var(--bg-dark);
             padding: 1rem 0;
@@ -76,7 +76,7 @@
             color: white;
         }
 
-        /* --- 全寬 Hero 區塊 --- */
+        /* --- Full-Width Hero Block --- */
         .hero-full-width {
             background-color: var(--bg-dark);
             padding: 4rem 0 6rem;
@@ -142,7 +142,7 @@
             background-color: #003366;
         }
 
-        /* --- 活動通知橫幅 --- */
+        /* --- Event Banner --- */
         .event-banner {
             max-width: 1200px;
             margin: -3rem auto 3rem; 
@@ -190,7 +190,7 @@
         }
 
 
-        /* --- 主要內容區容器 - 兩欄佈局 --- */
+        /* --- Main Content Container - Two Columns --- */
         .main-container {
             display: flex; 
             max-width: 1200px;
@@ -257,7 +257,7 @@
         .grade-tag.cond-B { background-color: #FF9800; } 
         .grade-tag.cond-C { background-color: #F44336; } 
 
-        /* --- 內容區塊通用樣式 --- */
+        /* --- Content Block General Styles --- */
         .content-section-card {
             background: white;
             border-radius: 8px;
@@ -273,7 +273,7 @@
             text-align: left;
         }
 
-        /* --- 分類與篩選 --- */
+        /* --- Category and Filtering --- */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -332,7 +332,7 @@
             cursor: pointer;
         }
 
-        /* --- 書籍卡片 (Book Card with image) --- */
+        /* --- Book Card (with image) --- */
         .book-card {
             background: white;
             border: 1px solid var(--border-color);
@@ -403,7 +403,7 @@
             align-self: flex-end;
         }
 
-        /* --- Modal 樣式 --- */
+        /* --- Modal Styles --- */
         .modal {
             display: none; 
             position: fixed;
@@ -464,7 +464,7 @@
             border-left: 4px solid var(--accent-color);
             margin-bottom: 1.5rem;
         }
-        /* RWD 調整 */
+        /* RWD Adjustments */
         @media (max-width: 992px) { 
             .main-container {
                 flex-direction: column; 
@@ -512,40 +512,40 @@
     <header>
         <div class="navbar-top">
             <a href="#" class="navbar-logo">
-                <div class="logo-zh">🔥 烈焰風暴骰子牛</div>
+                <div class="logo-zh">🔥 Blaze Storm Diced Beef</div>
                 <div class="logo-en">TRUE CORE</div>
             </a>
             <nav class="nav-links-top">
-                <a href="#">📚 二手書</a>
-                <a href="#">⬆️ 上架</a>
-                <a href="#">👤 帳戶</a>
-                <a href="#" onclick="showStandards()">❓ 幫助 / 評級標準</a>
+                <a href="#">📚 Used Books</a>
+                <a href="#">⬆️ Sell Book</a>
+                <a href="#">👤 My Account</a>
+                <a href="#" onclick="showStandards()">❓ Help / Grading</a>
             </nav>
         </div>
     </header>
 
     <div class="hero-full-width">
         <div class="hero-logo">
-            <div class="logo-zh">烈焰風暴骰子牛</div>
+            <div class="logo-zh">Blaze Storm Diced Beef</div>
             <div class="logo-en">TRUE CORE</div>
         </div>
-        <p class="hero-tagline">點燃學習熱情，用知識連結你我。</p>
+        <p class="hero-tagline">Ignite learning passion, connect us with knowledge.</p>
         
         <div class="search-bar-hero">
-            <input type="text" placeholder="尋找：課程名稱、老師或書名..." id="main-search">
-            <button class="cta-search-hero" onclick="handleSearch()">搜尋</button>
+            <input type="text" placeholder="Search: Course Name, Professor, or Book Title..." id="main-search">
+            <button class="cta-search-hero" onclick="handleSearch()">Search</button>
         </div>
         <p style="margin-top: 1rem; color: rgba(255,255,255,0.7); font-size: 0.9rem;">
-            例如：「經濟學」、「丁教授」、「資料結構與演算法」
+            e.g., "Economics", "Prof. Ding", "Data Structures and Algorithms"
         </p>
     </div>
 
     
     <div class="event-banner">
-        <h3>✨ 期初賣書買書大作戰！ ✨</h3>
-        <p><strong>活動日期：</strong> 開學第一週 (09/02 - 09/08)</p>
-        <p><strong>活動內容：</strong> 買賣S級書籍享免手續費優惠，A級以上書籍贈送精美書籤！</p>
-        <a href="#" class="cta-button">查看活動詳情</a>
+        <h3>✨ Semester Start Book Exchange Event! ✨</h3>
+        <p><strong>Date:</strong> First Week of Semester (09/02 - 09/08)</p>
+        <p><strong>Details:</strong> S-Grade books are eligible for fee waivers, and A-Grade books or better receive a free bookmark!</p>
+        <a href="#" class="cta-button">View Event Details</a>
     </div>
 
     <div class="main-container">
@@ -553,92 +553,92 @@
         <div class="content-area">
             
             <section class="content-section-card">
-                <h2>🔥 熱門科系快速入口</h2>
+                <h2>🔥 Popular Department Quick Entry</h2>
                 <div class="card-grid">
                     <a href="#" class="category-card" data-category="EEE">
                         <div class="card-icon">💡</div>
-                        <div class="card-title">電機工程系</div>
+                        <div class="card-title">Electrical Eng. (EEE)</div>
                     </a>
                     <a href="#" class="category-card" data-category="CS">
                         <div class="card-icon">🖥️</div>
-                        <div class="card-title">資訊工程系</div>
+                        <div class="card-title">Computer Science (CS)</div>
                     </a>
                     <a href="#" class="category-card" data-category="IM">
                         <div class="card-icon">📊</div>
-                        <div class="card-title">工業管理系</div>
+                        <div class="card-title">Industrial Mgmt. (IM)</div>
                     </a>
                     <a href="#" class="category-card" data-category="Materials">
                         <div class="card-icon">🧪</div>
-                        <div class="card-title">材料科學系</div>
+                        <div class="card-title">Materials Science</div>
                     </a>
                     <a href="#" class="category-card" data-category="Chem">
                         <div class="card-icon">🔬</div>
-                        <div class="card-title">化學工程系</div>
+                        <div class="card-title">Chemical Eng.</div>
                     </a>
                     <a href="#" class="category-card" data-category="Civil">
                         <div class="card-icon">🏗️</div>
-                        <div class="card-title">營建工程系</div>
+                        <div class="card-title">Civil Eng.</div>
                     </a>
                     <a href="#" class="category-card" data-category="ME">
                         <div class="card-icon">⚙️</div>
-                        <div class="card-title">機械工程系</div>
+                        <div class="card-title">Mechanical Eng. (ME)</div>
                     </a>
                     <a href="#" class="category-card" data-category="Design">
                         <div class="card-icon">🎨</div>
-                        <div class="card-title">設計系</div>
+                        <div class="card-title">Design</div>
                     </a>
                      <a href="#" class="category-card" data-category="Archi">
                         <div class="card-icon">🏛️</div>
-                        <div class="card-title">建築系</div>
+                        <div class="card-title">Architecture</div>
                     </a>
                     <a href="#" class="category-card" data-category="FL">
                         <div class="card-icon">🗣️</div>
-                        <div class="card-title">應用外語系</div>
+                        <div class="card-title">Foreign Languages</div>
                     </a>
                 </div>
             </section>
 
             <section class="content-section-card">
-                <h2>🎯 本週書籍推薦</h2>
+                <h2>🎯 Featured Books This Week</h2>
                 <div class="card-grid" id="featured-books-listing">
                     </div>
             </section>
 
             <section id="search-results" class="content-section-card">
-                <h2>📚 所有書籍列表</h2>
+                <h2>📚 All Book Listings</h2>
                 
                 <div class="filter-panel">
                     <div class="filter-item">
-                        <label for="filter-dept">科系篩選:</label>
+                        <label for="filter-dept">Dept. Filter:</label>
                         <select id="filter-dept" onchange="applyFilters()">
-                            <option value="">所有科系</option>
-                            <option value="EEE">電機工程系 (EEE)</option>
-                            <option value="CS">資訊工程系 (CS)</option>
-                            <option value="IM">工業管理系 (IM)</option>
-                            <option value="Materials">材料科學系 (Materials)</option>
-                            <option value="Chem">化學工程系 (Chem)</option>
-                            <option value="Civil">營建工程系 (Civil)</option>
-                            <option value="ME">機械工程系 (ME)</option>
-                            <option value="Design">設計系 (Design)</option>
-                            <option value="Archi">建築系 (Archi)</option>
-                            <option value="FL">應用外語系 (FL)</option>
+                            <option value="">All Departments</option>
+                            <option value="EEE">Electrical Eng. (EEE)</option>
+                            <option value="CS">Computer Science (CS)</option>
+                            <option value="IM">Industrial Mgmt. (IM)</option>
+                            <option value="Materials">Materials Science</option>
+                            <option value="Chem">Chemical Eng.</option>
+                            <option value="Civil">Civil Eng.</option>
+                            <option value="ME">Mechanical Eng. (ME)</option>
+                            <option value="Design">Design</option>
+                            <option value="Archi">Architecture</option>
+                            <option value="FL">Foreign Languages</option>
                         </select>
                     </div>
 
                     <div class="filter-item">
-                        <label for="filter-condition">書況篩選:</label>
+                        <label for="filter-condition">Condition Filter:</label>
                         <select id="filter-condition" onchange="applyFilters()">
-                            <option value="">所有書況</option>
-                            <option value="S">S 級 (近全新)</option>
-                            <option value="A">A 級 (輕微使用)</option>
-                            <option value="B">B 級 (明顯註記)</option>
-                            <option value="C">C 級 (瑕疵書)</option>
+                            <option value="">All Conditions</option>
+                            <option value="S">S Grade (Like New)</option>
+                            <option value="A">A Grade (Light Use)</option>
+                            <option value="B">B Grade (Notations)</option>
+                            <option value="C">C Grade (Defect)</option>
                         </select>
                     </div>
                     
                     <div class="filter-item">
-                        <label for="filter-max-price">最高價格:</label>
-                        <input type="number" id="filter-max-price" placeholder="例如: 500" oninput="applyFilters()">
+                        <label for="filter-max-price">Max Price:</label>
+                        <input type="number" id="filter-max-price" placeholder="e.g.: 500" oninput="applyFilters()">
                     </div>
                 </div>
 
@@ -649,25 +649,25 @@
 
         
         <div class="right-sidebar">
-            <h3>📖 二手書評級標準</h3>
+            <h3>📖 Used Book Grading Standards</h3>
             <ul class="condition-list">
                 <li>
-                    <h4><span class="grade-tag cond-S">S</span> S 級｜近全新</h4>
-                    <p>條件：幾乎沒翻閱痕跡、無筆記劃線、封面／封底完整無折、無水漬、無破損、書邊乾淨。</p>
-                    <p style="font-size:0.85rem; color:#00796b;">👉 賣新生最受歡迎，價格可到原價 60–75%。</p>
+                    <h4><span class="grade-tag cond-S">S</span> S Grade | Like New</h4>
+                    <p>Condition: Virtually no signs of use, no notes/highlights, perfect cover/back cover, no water damage/tears, clean edges.</p>
+                    <p style="font-size:0.85rem; color:#00796b;">👉 Most popular with freshmen, priced at 60–75% of original price.</p>
                 </li>
                 <li>
-                    <h4><span class="grade-tag cond-A">A</span> A 級｜輕微使用</h4>
-                    <p>條件：最多允許 1–2 項：少量劃線（不影響閱讀）、有名字、輕微筆跡、封角輕微磨損。</p>
-                    <p style="font-size:0.85rem; color:#00796b;">👉 推薦一般同學購買，價格約 40–55% 原價。</p>
+                    <h4><span class="grade-tag cond-A">A</span> A Grade | Light Use</h4>
+                    <p>Condition: Max 1–2 items allowed: Minor highlights (does not affect reading), name written, light scribbles, minor corner wear.</p>
+                    <p style="font-size:0.85rem; color:#00796b;">👉 Recommended for general students, priced around 40–55% of original price.</p>
                 </li>
                 <li>
-                    <h4><span class="grade-tag cond-B">B</span> B 級｜可用但有明顯註記</h4>
-                    <p>條件：可包含：劃線多、有筆記、書角折痕明顯、封面有明顯磨損。</p>
+                    <h4><span class="grade-tag cond-B">B</span> B Grade | Usable with Notations</h4>
+                    <p>Condition: May include: Extensive highlighting, notes, noticeable corner folds, clear cover wear.</p>
                 </li>
                 <li>
-                    <h4><span class="grade-tag cond-C">C</span> C 級｜瑕疵書（須明確標示）</h4>
-                    <p>條件：含其中任一就列 C：撕頁、破損、水漬、發霉、部分頁脫落、嚴重筆記（滿滿螢光筆）。</p>
+                    <h4><span class="grade-tag cond-C">C</span> C Grade | Defective Book (Must be marked)</h4>
+                    <p>Condition: Listed as C if any of the following apply: Torn/missing pages, water damage/mold, pages falling out, severe/heavy notations.</p>
                 </li>
             </ul>
         </div>
@@ -677,18 +677,18 @@
         <div class="modal-content" onclick="event.stopPropagation()">
             <span class="modal-close" onclick="closeModal()">&times;</span>
             <div class="detail-img-area">
-                <img id="detail-img-src" class="detail-img" alt="書本圖片">
+                <img id="detail-img-src" class="detail-img" alt="Book Image">
             </div>
             <div class="detail-info-area">
                 <h2 id="detail-title"></h2>
                 <p class="detail-small-info">
-                    課程: <span id="detail-course"></span> | 
-                    老師: <span id="detail-teacher"></span> | 
-                    版本: <span id="detail-version"></span>
+                    Course: <span id="detail-course"></span> | 
+                    Professor: <span id="detail-teacher"></span> | 
+                    Version: <span id="detail-version"></span>
                 </p>
                 
                 <div class="detail-condition-box">
-                    書況評級: 
+                    Condition Grade: 
                     <strong id="detail-condition-stars"></strong>
                     (<span id="detail-condition-text"></span>)
                     <p style="margin-top:0.5rem; font-size:0.9rem; color: var(--text-light);" id="detail-condition-description"></p>
@@ -696,10 +696,10 @@
 
                 <p id="detail-price"></p>
 
-                <button class="cta-detail" onclick="handleAddToCart()">加入購物車 / 立即下單</button>
+                <button class="cta-detail" onclick="handleAddToCart()">Add to Cart / Place Order</button>
 
                 <div class="detail-contact-info">
-                    <h4>📦 領取與面交資訊</h4>
+                    <h4>📦 Pickup & Meetup Info</h4>
                     <p id="detail-meetup-info"></p>
                 </div>
             </div>
@@ -707,35 +707,35 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 烈焰風暴骰子牛 True Core. All Rights Reserved. | 聯絡客服 | 關於我們</p>
+        <p>&copy; 2025 Blaze Storm Diced Beef True Core. All Rights Reserved. | Contact Customer Service | About Us</p>
     </footer>
 
     <script>
-        // --- 書籍分級標準 ---
+        // --- BOOK GRADING STANDARDS ---
         const conditionStandards = {
             'S': {
-                name: 'S 級｜近全新',
+                name: 'S Grade | Like New',
                 color: 'cond-S',
-                description: '條件：幾乎沒翻閱痕跡、無筆記劃線、封面／封底完整無折、無水漬、無破損、書邊乾淨。'
+                description: 'Conditions: Virtually no signs of use, no notes/highlights, perfect cover/back cover, no water damage/tears, clean edges.'
             },
             'A': {
-                name: 'A 級｜輕微使用',
+                name: 'A Grade | Light Use',
                 color: 'cond-A',
-                description: '條件：最多允許 1–2 項：少量劃線（不影響閱讀）、有名字、輕微筆跡、封角輕微磨損。推薦一般同學購買，價格約 40–55% 原價。'
+                description: 'Conditions: Max 1–2 items allowed: Minor highlights (does not affect reading), name written, light scribbles, minor corner wear. Recommended for general students, priced around 40–55% of original price.'
             },
             'B': {
-                name: 'B 級｜可用但有明顯註記',
+                name: 'B Grade | Usable with Notations',
                 color: 'cond-B',
-                description: '條件：可包含：劃線多、有筆記、書角折痕明顯、封面有明顯磨損。'
+                description: 'Conditions: May include: Extensive highlighting, notes, noticeable corner folds, clear cover wear.'
             },
             'C': {
-                name: 'C 級｜瑕疵書（須明確標示）',
+                name: 'C Grade | Defective Book (Must be marked)',
                 color: 'cond-C',
-                description: '條件：含其中任一就列 C：撕頁、破損、水漬、發霉、部分頁脫落、嚴重筆記（滿滿螢光筆）。'
+                description: 'Conditions: Listed as C if any of the following apply: Torn/missing pages, water damage/mold, pages falling out, severe/heavy notations.'
             }
         };
 
-        // 模擬圖片 URL
+        // Simulated image URL generator
         function getImageUrl(dept) {
             const base = "https://picsum.photos/300/200?random=";
             switch(dept) {
@@ -753,22 +753,22 @@
             }
         }
 
-        // 模擬書籍資料庫 (新增科系、圖片)
+        // Simulated Book Database
         const mockBooks = [
-            { id: 1, title: "基礎工程熱力學 (第三版)", course: "熱力學一", teacher: "丁教授", version: "2020", price: 350, condition: 'A', stars: 4, inventory: 3, dept: 'ME', image: getImageUrl('ME') },
-            { id: 2, title: "電路學與電子學 (第三版)", course: "電工學", teacher: "王老師", version: "200", price: 200, condition: 'B', stars: 3, inventory: 1, dept: 'EEE', image: getImageUrl('EEE') },
-            { id: 3, title: "資料結構與演算法", course: "資工必修", teacher: "陳老師", version: "2022", price: 480, condition: 'S', stars: 5, inventory: 2, dept: 'CS', image: getImageUrl('CS') },
-            { id: 4, title: "工程材料概論", course: "材料導論", teacher: "李教授", version: "2019", price: 100, condition: 'C', stars: 1, inventory: 5, dept: 'Materials', image: getImageUrl('Materials') },
-            { id: 5, title: "化學工程單元操作", course: "單元操作", teacher: "林老師", version: "2023", price: 550, condition: 'A', stars: 4, inventory: 4, dept: 'Chem', image: getImageUrl('Chem') },
-            { id: 6, title: "統計學與商業決策", course: "管理科學", teacher: "張教授", version: "2021", price: 320, condition: 'A', stars: 4, inventory: 0, dept: 'IM', image: getImageUrl('IM') },
-            { id: 7, title: "微積分下冊 (第十版)", course: "應用微積分", teacher: "丁教授", version: "2020", price: 300, condition: 'B', stars: 3, inventory: 6, dept: 'ME', image: getImageUrl('ME') },
-            { id: 8, title: "結構動力學", course: "結構工程", teacher: "趙教授", version: "2017", price: 600, condition: 'A', stars: 4, inventory: 2, dept: 'Civil', image: getImageUrl('Civil') },
-            { id: 9, title: "視覺設計概論", course: "設計理論", teacher: "黃老師", version: "2024", price: 400, condition: 'S', stars: 5, inventory: 1, dept: 'Design', image: getImageUrl('Design') },
-            { id: 10, title: "日語會話 I", course: "基礎日語", teacher: "佐藤老師", version: "2021", price: 250, condition: 'A', stars: 4, inventory: 3, dept: 'FL', image: getImageUrl('FL') },
-            { id: 11, title: "建築法規與實務", course: "建築設計", teacher: "陳教授", version: "2022", price: 700, condition: 'S', stars: 5, inventory: 1, dept: 'Archi', image: getImageUrl('Archi') }
+            { id: 1, title: "Basic Engineering Thermodynamics (3rd Ed)", course: "Thermodynamics I", teacher: "Prof. Ding", version: "2020", price: 350, condition: 'A', stars: 4, inventory: 3, dept: 'ME', image: getImageUrl('ME') },
+            { id: 2, title: "Circuit Analysis and Electronics (3rd Ed)", course: "Electrical Eng. Fund.", teacher: "Prof. Wang", version: "200", price: 200, condition: 'B', stars: 3, inventory: 1, dept: 'EEE', image: getImageUrl('EEE') },
+            { id: 3, title: "Data Structures and Algorithms", course: "CS Core", teacher: "Prof. Chen", version: "2022", price: 480, condition: 'S', stars: 5, inventory: 2, dept: 'CS', image: getImageUrl('CS') },
+            { id: 4, title: "Intro to Engineering Materials", course: "Materials Intro", teacher: "Prof. Li", version: "2019", price: 100, condition: 'C', stars: 1, inventory: 5, dept: 'Materials', image: getImageUrl('Materials') },
+            { id: 5, title: "Chemical Engineering Unit Operations", course: "Unit Operations", teacher: "Prof. Lin", version: "2023", price: 550, condition: 'A', stars: 4, inventory: 4, dept: 'Chem', image: getImageUrl('Chem') },
+            { id: 6, title: "Statistics and Business Decisions", course: "Management Science", teacher: "Prof. Zhang", version: "2021", price: 320, condition: 'A', stars: 4, inventory: 0, dept: 'IM', image: getImageUrl('IM') },
+            { id: 7, title: "Calculus II (10th Ed)", course: "Applied Calculus", teacher: "Prof. Ding", version: "2020", price: 300, condition: 'B', stars: 3, inventory: 6, dept: 'ME', image: getImageUrl('ME') },
+            { id: 8, title: "Structural Dynamics", course: "Structural Eng.", teacher: "Prof. Zhao", version: "2017", price: 600, condition: 'A', stars: 4, inventory: 2, dept: 'Civil', image: getImageUrl('Civil') },
+            { id: 9, title: "Visual Design Theory", course: "Design Theory", teacher: "Prof. Huang", version: "2024", price: 400, condition: 'S', stars: 5, inventory: 1, dept: 'Design', image: getImageUrl('Design') },
+            { id: 10, title: "Japanese Conversation I", course: "Basic Japanese", teacher: "Prof. Sato", version: "2021", price: 250, condition: 'A', stars: 4, inventory: 3, dept: 'FL', image: getImageUrl('FL') },
+            { id: 11, title: "Building Codes and Practice", course: "Architecture Design", teacher: "Prof. Chen", version: "2022", price: 700, condition: 'S', stars: 5, inventory: 1, dept: 'Archi', image: getImageUrl('Archi') }
         ];
 
-        // 模擬本週推薦書籍：S級或高價A級書
+        // Featured Books: S Grade or high-priced A Grade books
         const featuredBooks = mockBooks.filter(book => book.condition === 'S' || (book.condition === 'A' && book.price > 400));
 
 
@@ -777,12 +777,12 @@
         const mainSearch = document.getElementById('main-search');
         const bookDetailModal = document.getElementById('bookDetailModal'); 
 
-        // 輔助函數：顯示星星
+        // Helper function: Display stars
         function getStarHtml(stars) {
             return '★'.repeat(stars) + '☆'.repeat(5 - stars);
         }
 
-        // --- 核心函數：渲染書籍卡片 ---
+        // --- Core Function: Render Book Card ---
         function renderBookCard(book, container) {
             const isSoldOut = book.inventory === 0;
             const standard = conditionStandards[book.condition];
@@ -795,40 +795,43 @@
                 if (!isSoldOut) {
                     openBookDetail(book.id);
                 } else {
-                    alert('抱歉，此書已售罄！');
+                    alert('Sorry, this book is sold out!');
                 }
             };
             
             card.innerHTML = `
-                <img src="${book.image}" alt="${book.title} 封面" class="book-card-image">
+                <img src="${book.image}" alt="${book.title} Cover" class="book-card-image">
                 <div class="book-title">${book.title}</div>
-                <div class="book-info">課程：${book.course}</div>
+                <div class="book-info">Course: ${book.course}</div>
                 <div class="price-status">
-                    <span class="book-price">${isSoldOut ? '已售罄' : `$${book.price}`}</span>
-                    <span class="condition-tag ${standard.color}">${book.condition} 級</span>
+                    <span class="book-price">${isSoldOut ? 'Sold Out' : `$${book.price}`}</span>
+                    <span class="condition-tag ${standard.color}">${book.condition} Grade</span>
                 </div>
                 <div class="inventory" style="${isSoldOut ? 'color: grey; background: #f0f0f0;' : ''}">
-                    ${isSoldOut ? '無庫存' : `剩餘庫存：${book.inventory}`}
+                    ${isSoldOut ? 'No Stock' : `Stock: ${book.inventory}`}
                 </div>
             `;
             container.appendChild(card);
         }
 
-        // --- 初始化 / 渲染列表 ---
+        // --- Initialize / Render Listings ---
         function initializeListing(books = mockBooks) {
+            // Render All Books
             bookListing.innerHTML = '';
             books.forEach(book => renderBookCard(book, bookListing));
 
             if (books.length === 0) {
-                bookListing.innerHTML = '<p style="text-align: center; grid-column: 1 / -1; margin-top: 2rem; color: var(--text-light);">找不到符合條件的書籍。</p>';
+                bookListing.innerHTML = '<p style="text-align: center; grid-column: 1 / -1; margin-top: 2rem; color: var(--text-light);">No books found matching the criteria.</p>';
             }
             
-            // 初始載入特色推薦
-            featuredListing.innerHTML = '';
-            featuredBooks.forEach(book => renderBookCard(book, featuredListing));
+            // Render Featured Books only on initial load
+            if (books === mockBooks) {
+                featuredListing.innerHTML = '';
+                featuredBooks.forEach(book => renderBookCard(book, featuredListing));
+            }
         }
         
-        // --- 篩選功能 (應用於列表區塊) ---
+        // --- Filter Function (Applies to the main list) ---
         function applyFilters() {
             const query = mainSearch.value.trim().toLowerCase();
             const deptFilter = document.getElementById('filter-dept').value;
@@ -836,7 +839,7 @@
             const priceFilter = parseInt(document.getElementById('filter-max-price').value);
 
             const filtered = mockBooks.filter(book => {
-                // 1. 全文搜尋
+                // 1. Full-text search
                 if (query && !(
                     book.title.toLowerCase().includes(query) ||
                     book.course.toLowerCase().includes(query) ||
@@ -844,15 +847,15 @@
                 )) {
                     return false;
                 }
-                // 2. 科系篩選
+                // 2. Department filter
                 if (deptFilter && book.dept !== deptFilter) {
                     return false;
                 }
-                // 3. 書況篩選
+                // 3. Condition filter
                 if (condFilter && book.condition !== condFilter) {
                     return false;
                 }
-                // 4. 價格篩選
+                // 4. Price filter
                 if (!isNaN(priceFilter) && book.price > priceFilter) {
                     return false;
                 }
@@ -862,22 +865,22 @@
             initializeListing(filtered);
         }
 
-        // --- Hero 區塊搜尋 (觸發全過濾) ---
+        // --- Hero Search (Triggers full filter) ---
         function handleSearch() {
-            // 清空其他篩選條件，只應用主搜尋欄的文字
+            // Clear other filters before applying search text
             document.getElementById('filter-dept').value = "";
             document.getElementById('filter-condition').value = "";
             document.getElementById('filter-max-price').value = "";
             applyFilters();
         }
 
-        // --- 快速分類功能 (點擊卡片) ---
+        // --- Quick Category Filter (Card Click) ---
         document.querySelectorAll('.category-card').forEach(card => {
             card.addEventListener('click', function(e) {
                 e.preventDefault();
                 const category = this.getAttribute('data-category');
                 
-                // 設定篩選面板並應用過濾器
+                // Set filter panel and apply filter
                 document.getElementById('filter-dept').value = category;
                 document.getElementById('filter-condition').value = "";
                 document.getElementById('filter-max-price').value = "";
@@ -887,15 +890,15 @@
         });
 
 
-        // --- 書籍詳細頁 (Modal) 功能 ---
+        // --- Book Detail Modal Function ---
         function openBookDetail(bookId) {
             const book = mockBooks.find(b => b.id === bookId);
             if (!book) return;
 
             const standard = conditionStandards[book.condition];
 
-            // 填充 Modal 內容
-            document.getElementById('detail-img-src').src = book.image; // 圖片
+            // Fill Modal Content
+            document.getElementById('detail-img-src').src = book.image;
             document.getElementById('detail-title').textContent = book.title;
             document.getElementById('detail-course').textContent = book.course;
             document.getElementById('detail-teacher').textContent = book.teacher;
@@ -905,9 +908,9 @@
             document.getElementById('detail-condition-text').textContent = `${standard.name}`;
             document.getElementById('detail-condition-description').textContent = `${standard.description}`; 
             document.getElementById('detail-meetup-info').innerHTML = `
-                <p><strong>賣家資訊：</strong> 台科大二手書小天使 (#${book.id}號賣家)</p>
-                <p><strong>面交地點：</strong> 台科大圖書館一樓 / 校門口 (可彈性)</p>
-                <p><strong>建議面交時間：</strong> 每週一、三 18:00-19:00；或期初 / 期末活動期間。</p>
+                <p><strong>Seller Info:</strong> NTUST Used Book Angel (#${book.id} Seller)</p>
+                <p><strong>Meetup Location:</strong> NTUST Library 1F / Main Gate (Flexible)</p>
+                <p><strong>Suggested Meetup Time:</strong> Mon, Wed 18:00-19:00; or during Semester Start/End Events.</p>
             `;
 
             bookDetailModal.style.display = 'block';
@@ -920,26 +923,26 @@
         }
 
         function handleAddToCart() {
-            alert("已成功加入購物車！(模擬功能)\n接下來將進入結帳流程...");
+            alert("Successfully added to cart! (Simulated function)\nProceeding to checkout...");
             closeModal();
         }
 
         function showStandards() {
-            // 點擊導航欄的幫助/評級標準時，滾動到右側欄頂部
+            // Scroll to the right sidebar when "Help/Grading" is clicked
             const sidebar = document.querySelector('.right-sidebar');
             if (sidebar) {
                 sidebar.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
         
-        // 監聽 ESC 鍵關閉 Modal
+        // Listen for ESC key to close Modal
         window.onkeydown = function(event) {
             if (event.key === 'Escape' && bookDetailModal.style.display === 'block') {
                 closeModal();
             }
         };
 
-        // 啟動網站：初始載入所有書籍
+        // Start website: Initial load of all books
         window.onload = () => initializeListing();
 
     </script>
